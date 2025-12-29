@@ -1,6 +1,6 @@
 {
   "name": "@hashtagcms/themes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Marghoob Suleman",
     "email": "marghoobsuleman@gmail.com",
@@ -16,8 +16,10 @@
   },
   "homepage": "https://github.com/marghoobsuleman/cms-frontend-kit#readme",
   "main": "src/core/js/index.js",
+  "bin": "./bin/cli.js",
   "files": [
-    "src"
+    "src",
+    "bin"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -30,9 +32,9 @@
     "@babel/core": "^7.23.0",
     "@babel/preset-env": "^7.23.0",
     "babel-loader": "^9.1.0",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.0",
     "mini-css-extract-plugin": "^2.7.0",
-    "copy-webpack-plugin": "^11.0.0",
     "sass": "^1.69.0",
     "sass-loader": "^13.3.0",
     "webpack": "^5.89.0",
@@ -40,6 +42,9 @@
   },
   "dependencies": {
     "axios": "^1.8.0",
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "chalk": "^4.1.2",
+    "fs-extra": "^11.3.3",
+    "inquirer": "^8.2.7"
   }
 }

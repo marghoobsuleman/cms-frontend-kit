@@ -43,6 +43,21 @@ import '@hashtagcms/themes/src/themes/basic/js/app';
 <script src="node_modules/@hashtagcms/themes/dist/themes/basic/app.js"></script>
 ```
 
+### 💻 CLI Usage
+
+You can interactive copy assets (fonts, images, vendor files) from a theme to your project using the CLI.
+
+```bash
+# Run the interactive setup
+npx @hashtagcms/themes init
+```
+
+The CLI will ask you:
+1. Which theme you want to install
+2. Where to copy the assets (default: `./resources/assets/fe`)
+
+The assets will be copied to `<destination>/<theme-name>/`.
+
 ## 🎨 Available Themes
 
 ### Basic Theme
