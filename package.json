@@ -1,6 +1,6 @@
 {
   "name": "@hashtagcms/web-ui-kit",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": {
     "name": "HashtagCMS",
     "url": "https://github.com/hashtagcms"
@@ -14,7 +14,12 @@
     "url": "https://github.com/hashtagcms/web-ui-kit/issues"
   },
   "homepage": "https://github.com/hashtagcms/web-ui-kit#readme",
-  "bin": "./bin/cli.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "web-ui-kit": "bin/cli.js"
+  },
   "files": [
     "src",
     "bin"
