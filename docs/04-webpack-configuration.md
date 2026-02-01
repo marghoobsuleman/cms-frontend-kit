@@ -506,10 +506,10 @@ import Subscribe from '@components/subscribe';
 
 ## 📚 Related Documentation
 
-- [Building JavaScript](./BUILDING_JAVASCRIPT.md) - JavaScript compilation
-- [Building CSS](./BUILDING_CSS.md) - CSS/SCSS compilation
-- [Creating Themes](./CREATING_THEMES.md) - Theme creation guide
-- [Theme Structure](./THEME_STRUCTURE.md) - File organization
+- [Building JavaScript](./06-building-javascript.md) - JavaScript compilation
+- [Building CSS](./05-building-css.md) - CSS/SCSS compilation
+- [Creating Themes](./02-creating-themes.md) - Theme creation guide
+- [Theme Structure](./03-theme-structure.md) - File organization
 
 ---
 

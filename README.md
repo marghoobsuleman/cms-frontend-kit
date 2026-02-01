@@ -1,46 +1,53 @@
-# @hashtagcms/themes
+# @hashtagcms/web-ui-kit (Laravel/Blade)
 
-> Beautiful, customizable themes for HashtagCMS with shared core logic
+> Frontend Themes and UI components for the HashtagCMS ecosystem
 
-[![npm version](https://img.shields.io/npm/v/@hashtagcms/themes.svg)](https://www.npmjs.com/package/@hashtagcms/themes)
+[![npm version](https://img.shields.io/npm/v/@hashtagcms/web-ui-kit.svg)](https://www.npmjs.com/package/@hashtagcms/web-ui-kit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-This package contains frontend themes and core JavaScript logic for the HashtagCMS ecosystem. Switch between themes while sharing the same underlying functionality.
+This package contains frontend themes specifically designed for the **Blade/PHP (Laravel)** ecosystem of HashtagCMS. It uses the core functionality provided by `@hashtagcms/web-sdk` to share underlying logic across different designs.
+
+> **Target Platform**: PHP / Laravel
+
+## Other Platforms
+If you are looking for other implementations, please check:
+*   **Node.js**: [`@hashtagcms/web-ui-kit-nodejs`](https://github.com/hashtagcms/web-ui-kit-nodejs)
+*   **Java**: [`@hashtagcms/web-ui-kit-java`](https://github.com/hashtagcms/web-ui-kit-java) (Coming Soon)
+*   **Core SDK**: `@hashtagcms/web-sdk` (Shared JS Logic)
 
 ## ✨ Features
 
-- 🎨 **Multiple Themes** - Choose from Basic or Elegant themes
-- 🔧 **Customizable** - Override variables and extend styles
+- 🎨 **Multiple Themes** - Includes `basic` and `elegant` themes out of the box
+- 🛠️ **Customizable** - Built with SCSS variables for easy branding
 - 📦 **Modular** - Use source files or pre-compiled assets
 - 🚀 **Framework Agnostic** - Works with any JavaScript framework
 - 📱 **Responsive** - Mobile-first design
 - ♿ **Accessible** - WCAG compliant
 
-## 📦 Quick Start
+## 📦 Installation
 
 ### Installation
 
 ```bash
-npm install @hashtagcms/themes
+npm install @hashtagcms/web-ui-kit
 ```
 
 ### Basic Usage
 
 **Import in your SCSS:**
 ```scss
-@import "~@hashtagcms/themes/src/themes/basic/sass/app";
+@import "~@hashtagcms/web-ui-kit/src/themes/basic/sass/app";
 ```
 
-**Import in your JavaScript:**
+**In JavaScript:**
 ```javascript
-import '@hashtagcms/themes/src/themes/basic/js/app';
+import '@hashtagcms/web-ui-kit/src/themes/basic/js/app';
 ```
 
-### Using Pre-compiled Assets
-
+**In HTML:**
 ```html
-<link rel="stylesheet" href="node_modules/@hashtagcms/themes/dist/themes/basic/app.css">
-<script src="node_modules/@hashtagcms/themes/dist/themes/basic/app.js"></script>
+<link rel="stylesheet" href="node_modules/@hashtagcms/web-ui-kit/dist/themes/basic/app.css">
+<script src="node_modules/@hashtagcms/web-ui-kit/dist/themes/basic/app.js"></script>
 ```
 
 ### 💻 CLI Usage
@@ -49,7 +56,7 @@ You can interactive copy assets (fonts, images, vendor files) from a theme to yo
 
 ```bash
 # Run the interactive setup
-npx @hashtagcms/themes init
+npx @hashtagcms/web-ui-kit init
 ```
 
 The CLI will ask you:
@@ -77,11 +84,11 @@ Modern, sophisticated design with smooth animations.
 
 ## 📚 Documentation
 
-- **[Getting Started](./docs/GETTING_STARTED.md)** - Installation and basic usage
-- **[Creating Themes](./docs/CREATING_THEMES.md)** - Step-by-step guide to create custom themes
-- **[Theme Structure](./docs/THEME_STRUCTURE.md)** - Package organization and architecture
-- **[API Reference](./docs/API_REFERENCE.md)** - Complete API documentation
-- **[FAQ](./docs/FAQ.md)** - Frequently asked questions
+- **[Getting Started](./docs/01-getting-started.md)** - Installation and basic usage
+- **[Creating Themes](./docs/02-creating-themes.md)** - Step-by-step guide to create custom themes
+- **[Theme Structure](./docs/03-theme-structure.md)** - Package organization and architecture
+- **[API Reference](./docs/07-api-reference.md)** - Complete API documentation
+- **[FAQ](./docs/08-faq.md)** - Frequently asked questions
 
 ## 🚀 Creating a Custom Theme
 
@@ -97,7 +104,7 @@ touch src/themes/my-theme/sass/app.scss
 npm run build
 ```
 
-See the [Creating Themes Guide](./docs/CREATING_THEMES.md) for detailed instructions.
+See the [Creating Themes Guide](./docs/02-creating-themes.md) for detailed instructions.
 
 ## 🛠️ Development
 
@@ -117,12 +124,11 @@ npm run watch
 ### Project Structure
 
 ```
-@hashtagcms/themes/
+@hashtagcms/web-ui-kit/
 ├── src/
-│   ├── core/          # Shared JavaScript logic
-│   └── themes/        # Individual themes
-│       ├── basic/
-│       └── elegant/
+│   ├── themes/        # Individual themes
+│   │   ├── basic/     # Basic theme using @hashtagcms/web-sdk
+│   │   └── elegant/   # Elegant theme using @hashtagcms/web-sdk
 ├── dist/              # Compiled assets
 ├── docs/              # Documentation
 └── package.json
@@ -145,13 +151,13 @@ We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md)
 
 ## 🆘 Support
 
-- 📖 [Documentation](./docs/GETTING_STARTED.md)
-- 💬 [GitHub Discussions](https://github.com/hashtagcms/cms-frontend-kit/discussions)
-- 🐛 [Report Issues](https://github.com/hashtagcms/cms-frontend-kit/issues)
+- 📖 [Documentation](./docs/01-getting-started.md)
+- 💬 [GitHub Discussions](https://github.com/hashtagcms/web-ui-kit/discussions)
+- 🐛 [Report Issues](https://github.com/hashtagcms/web-ui-kit/issues)
 
 ## 🌟 Showcase
 
-Using @hashtagcms/themes in your project? We'd love to feature it! Open an issue to share your work.
+Using @hashtagcms/web-ui-kit in your project? We'd love to feature it! Open an issue to share your work.
 
 ---
 

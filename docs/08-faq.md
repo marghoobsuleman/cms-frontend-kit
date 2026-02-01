@@ -6,15 +6,15 @@
 
 **A:** Install via npm:
 ```bash
-npm install @hashtagcms/themes
+npm install @hashtagcms/web-ui-kit
 ```
 
 ### Q: Can I use the themes without a build system?
 
 **A:** Yes! Use the pre-compiled assets from the `dist/` folder:
 ```html
-<link rel="stylesheet" href="node_modules/@hashtagcms/themes/dist/themes/basic/app.css">
-<script src="node_modules/@hashtagcms/themes/dist/themes/basic/app.js"></script>
+<link rel="stylesheet" href="node_modules/@hashtagcms/web-ui-kit/dist/themes/basic/app.css">
+<script src="node_modules/@hashtagcms/web-ui-kit/dist/themes/basic/app.js"></script>
 ```
 
 ### Q: Which theme should I choose?
@@ -36,7 +36,7 @@ $primary-color: #your-color;
 $secondary-color: #your-color;
 
 // Import theme
-@import "~@hashtagcms/themes/src/themes/basic/sass/app";
+@import "~@hashtagcms/web-ui-kit/src/themes/basic/sass/app";
 ```
 
 ### Q: Can I use only parts of a theme?
@@ -44,7 +44,7 @@ $secondary-color: #your-color;
 **A:** Yes! Import specific components:
 ```javascript
 // Import only the subscribe component
-import Subscribe from '@hashtagcms/themes/src/core/js/components/subscribe';
+import Subscribe from '@hashtagcms/web-ui-kit/src/core/js/components/subscribe';
 ```
 
 ### Q: How do I add custom fonts?
@@ -67,7 +67,7 @@ $font-primary: 'Your Font', sans-serif;
 2. Add `js/app.js` and `sass/app.scss`
 3. Run `npm run build`
 
-See [Creating Themes](./CREATING_THEMES.md) for detailed guide.
+See [Creating Themes](./02-creating-themes.md) for detailed guide.
 
 ### Q: How do I test my theme locally?
 
@@ -165,11 +165,11 @@ See [Creating Themes](./CREATING_THEMES.md) for detailed guide.
 1. Install the package
 2. Import in your `resources/js/app.js`:
    ```javascript
-   import '@hashtagcms/themes/src/themes/basic/js/app';
+   import '@hashtagcms/web-ui-kit/src/themes/basic/js/app';
    ```
 3. Import in your `resources/sass/app.scss`:
    ```scss
-   @import "~@hashtagcms/themes/src/themes/basic/sass/app";
+   @import "~@hashtagcms/web-ui-kit/src/themes/basic/sass/app";
    ```
 4. Build with Laravel Mix or Vite
 
@@ -179,8 +179,8 @@ See [Creating Themes](./CREATING_THEMES.md) for detailed guide.
 1. Install via npm in your theme directory
 2. Enqueue compiled assets in `functions.php`:
    ```php
-   wp_enqueue_style('theme', get_template_directory_uri() . '/node_modules/@hashtagcms/themes/dist/themes/basic/app.css');
-   wp_enqueue_script('theme', get_template_directory_uri() . '/node_modules/@hashtagcms/themes/dist/themes/basic/app.js');
+   wp_enqueue_style('theme', get_template_directory_uri() . '/node_modules/@hashtagcms/web-ui-kit/dist/themes/basic/app.css');
+   wp_enqueue_script('theme', get_template_directory_uri() . '/node_modules/@hashtagcms/web-ui-kit/dist/themes/basic/app.js');
    ```
 
 ### Q: Can I use with static site generators?
@@ -203,7 +203,7 @@ See [Contributing Guidelines](../CONTRIBUTING.md).
 
 ### Q: Can I report bugs or request features?
 
-**A:** Yes! Open an issue on [GitHub](https://github.com/marghoobsuleman/hashtagcms-themes/issues).
+**A:** Yes! Open an issue on [GitHub](https://github.com/hashtagcms/web-ui-kit/issues).
 
 ### Q: How do I submit a theme for inclusion?
 
@@ -271,7 +271,7 @@ See [Contributing Guidelines](../CONTRIBUTING.md).
 
 **A:**
 ```bash
-npm update @hashtagcms/themes
+npm update @hashtagcms/web-ui-kit
 ```
 
 ### Q: Will updates break my customizations?
@@ -282,7 +282,7 @@ npm update @hashtagcms/themes
 
 **A:**
 ```bash
-npm list @hashtagcms/themes
+npm list @hashtagcms/web-ui-kit
 ```
 
 ---
@@ -293,9 +293,9 @@ npm list @hashtagcms/themes
 
 **A:**
 - Check this FAQ
-- Read the [documentation](./GETTING_STARTED.md)
-- Ask in [GitHub Discussions](https://github.com/marghoobsuleman/hashtagcms-themes/discussions)
-- Open an [issue](https://github.com/marghoobsuleman/hashtagcms-themes/issues)
+- Read the [documentation](./01-getting-started.md)
+- Ask in [GitHub Discussions](https://github.com/hashtagcms/web-ui-kit/discussions)
+- Open an [issue](https://github.com/hashtagcms/web-ui-kit/issues)
 
 ### Q: Is there a community?
 
@@ -309,8 +309,8 @@ npm list @hashtagcms/themes
 
 ## Related Documentation
 
-- [Getting Started](./GETTING_STARTED.md)
-- [Creating Themes](./CREATING_THEMES.md)
-- [Theme Structure](./THEME_STRUCTURE.md)
-- [API Reference](./API_REFERENCE.md)
+- [Getting Started](./01-getting-started.md)
+- [Creating Themes](./02-creating-themes.md)
+- [Theme Structure](./03-theme-structure.md)
+- [API Reference](./07-api-reference.md)
 - [Contributing](../CONTRIBUTING.md)

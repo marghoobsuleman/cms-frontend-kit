@@ -725,11 +725,11 @@ nav ul li a {
 
 ## 📚 Related Documentation
 
-- [Building JavaScript](./BUILDING_JAVASCRIPT.md) - JavaScript compilation guide
-- [Webpack Configuration](./WEBPACK_CONFIGURATION.md) - Complete webpack setup
-- [Theme Structure](./THEME_STRUCTURE.md) - File organization
-- [Creating Themes](./CREATING_THEMES.md) - Complete theme guide
+- [Building JavaScript](./06-building-javascript.md) - JavaScript compilation guide
+- [Webpack Configuration](./04-webpack-configuration.md) - Complete webpack setup
+- [Theme Structure](./03-theme-structure.md) - File organization
+- [Creating Themes](./02-creating-themes.md) - Complete theme guide
 
 ---
 
-**Next:** [Webpack Configuration →](./WEBPACK_CONFIGURATION.md)
+**Next:** [Webpack Configuration →](./04-webpack-configuration.md)

@@ -1,6 +1,6 @@
 # API Reference
 
-Complete API reference for @hashtagcms/themes components and utilities.
+Complete API reference for @hashtagcms/web-ui-kit components and utilities.
 
 ## Core Components
 
@@ -8,22 +8,19 @@ Complete API reference for @hashtagcms/themes components and utilities.
 
 Newsletter subscription form handler.
 
-**Location:** `src/core/js/components/subscribe.js`
+**Package:** `@hashtagcms/web-sdk`
 
 #### Constructor
 
 ```javascript
-new Subscribe(element)
+new Subscribe()
 ```
-
-**Parameters:**
-- `element` (HTMLElement|string) - Form element or selector
 
 **Example:**
 ```javascript
-import Subscribe from '@hashtagcms/themes/src/core/js/components/subscribe';
+import { Subscribe } from '@hashtagcms/web-sdk';
 
-const subscribe = new Subscribe('#subscribe-form');
+const subscribe = new Subscribe();
 ```
 
 #### Methods
@@ -62,66 +59,11 @@ if (subscribe.validate()) {
 </form>
 ```
 
----
-
-### Form Helper
-
-Form validation and submission utilities.
-
-**Location:** `src/core/js/helpers/form.js`
-
-#### Constructor
-
-```javascript
-new Form(selector, options)
-```
-
-**Parameters:**
-- `selector` (string) - Form selector
-- `options` (Object) - Configuration options
-  - `validateOnBlur` (boolean) - Validate on blur, default: `true`
-  - `validateOnSubmit` (boolean) - Validate on submit, default: `true`
-
-**Example:**
-```javascript
-import { Form } from '@hashtagcms/themes/src/core/js/helpers/form';
-
-const form = new Form('#my-form', {
-    validateOnBlur: true,
-    validateOnSubmit: true
-});
-```
-
-#### Methods
-
-##### `validate()`
-Validates all form fields.
-
-**Returns:** `boolean`
-
-##### `reset()`
-Resets form to initial state.
-
-**Returns:** `void`
-
-##### `getData()`
-Gets form data as object.
-
-**Returns:** `Object`
-
-**Example:**
-```javascript
-const data = form.getData();
-// { email: 'user@example.com', name: 'John' }
-```
-
----
-
 ### AppConfig
 
 Application configuration manager.
 
-**Location:** `src/core/js/helpers/common.js`
+**Package:** `@hashtagcms/web-sdk`
 
 #### Constructor
 
@@ -134,7 +76,7 @@ new AppConfig(config)
 
 **Example:**
 ```javascript
-import AppConfig from '@hashtagcms/themes/src/core/js/helpers/common';
+import { AppConfig } from '@hashtagcms/web-sdk';
 
 const config = new AppConfig({
     apiUrl: 'https://api.example.com',
@@ -177,14 +119,13 @@ config.set('apiUrl', 'https://new-api.example.com');
 
 Page view and event tracking.
 
-**Location:** `src/core/js/utils/analytics.js`
+**Package:** `@hashtagcms/web-sdk`
 
-#### Auto-initialization
-
-Simply import to enable automatic page view tracking:
+#### Initialization
 
 ```javascript
-import '@hashtagcms/themes/src/core/js/utils/analytics';
+import { Analytics } from '@hashtagcms/web-sdk';
+const analytics = new Analytics();
 ```
 
 #### Methods
@@ -199,9 +140,7 @@ Tracks a page view.
 
 **Example:**
 ```javascript
-import { trackPageView } from '@hashtagcms/themes/src/core/js/utils/analytics';
-
-trackPageView('/about');
+analytics.trackPageView('/about');
 ```
 
 ##### `trackEvent(category, action, label, value)`
@@ -217,7 +156,7 @@ Tracks a custom event.
 
 **Example:**
 ```javascript
-import { trackEvent } from '@hashtagcms/themes/src/core/js/utils/analytics';
+import { trackEvent } from '@hashtagcms/web-sdk';
 
 trackEvent('Button', 'Click', 'Subscribe', 1);
 ```
@@ -237,7 +176,7 @@ trackEvent('Button', 'Click', 'Subscribe', 1);
 
 #### Usage
 ```javascript
-import '@hashtagcms/themes/src/themes/basic/js/app';
+import '@hashtagcms/web-ui-kit/src/themes/basic/js/app';
 ```
 
 ---
@@ -285,7 +224,7 @@ Initializes card scroll animations.
 
 #### Usage
 ```javascript
-import '@hashtagcms/themes/src/themes/elegant/js/app';
+import '@hashtagcms/web-ui-kit/src/themes/elegant/js/app';
 ```
 
 ---
@@ -465,7 +404,7 @@ TypeScript definitions are not currently included but may be added in future ver
 
 ## Related Documentation
 
-- [Getting Started](./GETTING_STARTED.md)
-- [Creating Themes](./CREATING_THEMES.md)
-- [Theme Structure](./THEME_STRUCTURE.md)
+- [Getting Started](./01-getting-started.md)
+- [Creating Themes](./02-creating-themes.md)
+- [Theme Structure](./03-theme-structure.md)
 - [Contributing](../CONTRIBUTING.md)

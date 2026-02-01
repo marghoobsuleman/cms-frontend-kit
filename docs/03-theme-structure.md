@@ -1,11 +1,11 @@
 # Theme Structure
 
-Understanding the structure of the @hashtagcms/themes package.
+Understanding the structure of the @hashtagcms/web-ui-kit package.
 
 ## 📁 Package Structure
 
 ```
-@hashtagcms/themes/
+@hashtagcms/web-ui-kit/
 ├── dist/                      # Compiled assets (generated)
 │   └── themes/
 │       ├── basic/
@@ -18,15 +18,6 @@ Understanding the structure of the @hashtagcms/themes package.
 │           ├── app.js
 │           └── img/
 ├── src/
-│   ├── core/                  # Shared JavaScript logic
-│   │   └── js/
-│   │       ├── components/    # Reusable components
-│   │       │   ├── subscribe.js
-│   │       │   └── form.js
-│   │       ├── helpers/       # Utility helpers
-│   │       │   └── common.js
-│   │       └── utils/         # Utility functions
-│   │           └── analytics.js
 │   └── themes/                # Individual themes
 │       ├── basic/
 │       │   ├── js/
@@ -75,10 +66,8 @@ src/themes/[theme-name]/
 **`js/app.js`** - Theme JavaScript entry point
 
 ```javascript
-// Import shared core components
-import '../../../core/js/utils/analytics';
-import Subscribe from '../../../core/js/components/subscribe';
-import AppConfig from '../../../core/js/helpers/common';
+// Import shared core components from @hashtagcms/web-sdk
+import { Analytics, Subscribe, AppConfig } from '@hashtagcms/web-sdk';
 
 // Theme-specific class
 class ThemeName {
@@ -149,25 +138,20 @@ body { ... }
 .hero { ... }
 ```
 
-## 🔧 Core Components
+## 🔧 Core Components (via @hashtagcms/web-sdk)
 
 ### Shared JavaScript Components
 
-Located in `src/core/js/components/`:
+Shared logic and components are now managed in the `@hashtagcms/web-sdk` package.
 
 #### Subscribe Component
-**File:** `subscribe.js`
-
 Handles newsletter subscription forms.
 
 **Usage:**
 ```javascript
-import Subscribe from '../../../core/js/components/subscribe';
+import { Subscribe } from '@hashtagcms/web-sdk';
 
-const subscribeElement = document.getElementById('subscribe-form');
-if (subscribeElement) {
-    new Subscribe(subscribeElement);
-}
+const subscribe = new Subscribe();
 ```
 
 **HTML:**
@@ -208,16 +192,12 @@ import '../../../core/js/utils/analytics';
 
 ### Shared Helpers
 
-Located in `src/core/js/helpers/`:
-
 #### Common Helpers
-**File:** `common.js`
-
 Provides common utility functions.
 
 **Usage:**
 ```javascript
-import AppConfig from '../../../core/js/helpers/common';
+import { AppConfig } from '@hashtagcms/web-sdk';
 
 const config = new AppConfig();
 ```
@@ -228,10 +208,10 @@ const config = new AppConfig();
 
 The `webpack.config.js` automatically:
 
-1. **Discovers themes** in `src/themes/`
-2. **Creates entries** for each theme's JS and SCSS
-3. **Compiles assets** to `dist/themes/[theme-name]/`
-4. **Copies static assets** (images, fonts)
+1.  **Discovers themes** in `src/themes/`
+2.  **Creates entries** for each theme's JS and SCSS
+3.  **Compiles assets** to `dist/themes/[theme-name]/`
+4.  **Copies static assets** (images, fonts)
 
 ### Build Process
 
@@ -268,7 +248,7 @@ dist/
 
 ```json
 {
-  "name": "@hashtagcms/themes",
+  "name": "@hashtagcms/web-ui-kit",
   "version": "1.0.0",
   "main": "dist/themes/basic/app.js",
   "files": [
@@ -299,21 +279,19 @@ dist/
 
 ```scss
 // Import theme SCSS
-@import "~@hashtagcms/themes/src/themes/basic/sass/app";
+@import "~@hashtagcms/web-ui-kit/src/themes/basic/sass/app";
 ```
 
 ```javascript
 // Import theme JS
-import '@hashtagcms/themes/src/themes/basic/js/app';
+import '@hashtagcms/web-ui-kit/src/themes/basic/js/app';
 ```
 
 ### From Theme Code
 
 ```javascript
-// Import core components (from theme JS)
-import Subscribe from '../../../core/js/components/subscribe';
-import AppConfig from '../../../core/js/helpers/common';
-import '../../../core/js/utils/analytics';
+// Import core components (from @hashtagcms/web-sdk)
+import { Subscribe, Analytics, AppConfig } from '@hashtagcms/web-sdk';
 ```
 
 ```scss
@@ -334,7 +312,7 @@ import '../../../core/js/utils/analytics';
 
 **In HTML:**
 ```html
-<img src="node_modules/@hashtagcms/themes/dist/themes/basic/img/hero.png">
+<img src="node_modules/@hashtagcms/web-ui-kit/dist/themes/basic/img/hero.png">
 ```
 
 ### Fonts
@@ -367,7 +345,7 @@ $fa-font-path: "../fonts";
 
 ## 📚 Related Documentation
 
-- [Getting Started](./GETTING_STARTED.md)
-- [Creating Themes](./CREATING_THEMES.md)
+- [Getting Started](./01-getting-started.md)
+- [Creating Themes](./02-creating-themes.md)
 - [Contributing](../CONTRIBUTING.md)
-- [API Reference](./API_REFERENCE.md)
+- [API Reference](./07-api-reference.md)

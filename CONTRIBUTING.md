@@ -20,5 +20,5 @@ Currently, this package is tested by linking it to a local HashtagCMS project.
 ```bash
 npm link
 # In your project
-npm link @hashtagcms/themes
+npm link @hashtagcms/web-ui-kit
 ```

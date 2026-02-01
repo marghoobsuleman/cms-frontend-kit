@@ -15,10 +15,8 @@ src/themes/my-theme/
 **File:** `src/themes/my-theme/js/app.js`
 
 ```javascript
-// Import shared core components from @hashtagcms/themes package
-import '@hashtagcms/themes/src/core/js/utils/analytics';
-import Subscribe from '@hashtagcms/themes/src/core/js/components/subscribe';
-import AppConfig from '@hashtagcms/themes/src/core/js/helpers/common';
+// Import shared core components from @hashtagcms/web-sdk
+import { Analytics, Subscribe, AppConfig } from '@hashtagcms/web-sdk';
 
 /**
  * My Theme JavaScript
@@ -37,11 +35,14 @@ class MyTheme {
         // Initialize subscribe form
         const subscribeElement = document.getElementById('subscribe-form');
         if (subscribeElement) {
-            new Subscribe(subscribeElement);
+            new Subscribe({ element: subscribeElement });
         }
 
         // Initialize app config
         window.AppConfig = new AppConfig();
+
+        // Initialize analytics
+        new Analytics();
     }
 
     /**
@@ -130,10 +131,10 @@ module.exports = {
 
 ### What This Does:
 
-1. **Discovers Themes** - Scans `src/themes/` directory
-2. **Creates Entries** - For each `js/app.js` found
-3. **Compiles JavaScript** - Using Babel for ES6+ support
-4. **Outputs** - To `dist/themes/[theme-name]/app.js`
+1.  **Discovers Themes** - Scans `src/themes/` directory
+2.  **Creates Entries** - For each `js/app.js` found
+3.  **Compiles JavaScript** - Using Babel for ES6+ support
+4.  **Outputs** - To `dist/themes/[theme-name]/app.js`
 
 ## 🏗️ Step 3: Build JavaScript
 
@@ -159,27 +160,18 @@ dist/
 
 ## 📦 Using Core Components
 
-### Available Core Components
-
-Located in `src/core/js/`:
+### Available Core Components (via @hashtagcms/web-sdk)
 
 #### 1. Subscribe Component
 ```javascript
-import Subscribe from '@hashtagcms/themes/src/core/js/components/subscribe';
+import { Subscribe } from '@hashtagcms/web-sdk';
 
-const subscribe = new Subscribe('#subscribe-form');
+const subscribe = new Subscribe();
 ```
 
-#### 2. Form Helper
+#### 2. AppConfig
 ```javascript
-import { Form } from '@hashtagcms/themes/src/core/js/helpers/form';
-
-const form = new Form('#my-form');
-```
-
-#### 3. AppConfig
-```javascript
-import AppConfig from '@hashtagcms/themes/src/core/js/helpers/common';
+import { AppConfig } from '@hashtagcms/web-sdk';
 
 const config = new AppConfig({
     apiUrl: 'https://api.example.com'
@@ -188,7 +180,7 @@ const config = new AppConfig({
 
 #### 4. Analytics
 ```javascript
-import '@hashtagcms/themes/src/core/js/utils/analytics';
+import '@hashtagcms/web-ui-kit/src/core/js/utils/analytics';
 // Automatically tracks page views
 ```
 
@@ -383,7 +375,7 @@ class MyTheme {
 ### Import Errors
 
 **Check:**
-1. Package is installed: `npm install @hashtagcms/themes`
+1. Package is installed: `npm install @hashtagcms/web-ui-kit`
 2. File extensions are omitted in imports
 3. Named vs default exports match
 
@@ -396,11 +388,11 @@ class MyTheme {
 
 ## 📚 Related Documentation
 
-- [Building CSS](./BUILDING_CSS.md) - CSS compilation guide
-- [Webpack Configuration](./WEBPACK_CONFIGURATION.md) - Complete webpack setup
-- [API Reference](./API_REFERENCE.md) - Component APIs
-- [Theme Structure](./THEME_STRUCTURE.md) - File organization
+- [Building CSS](./05-building-css.md) - CSS compilation guide
+- [Webpack Configuration](./04-webpack-configuration.md) - Complete webpack setup
+- [API Reference](./07-api-reference.md) - Component APIs
+- [Theme Structure](./03-theme-structure.md) - File organization
 
 ---
 
-**Next:** [Building CSS →](./BUILDING_CSS.md)
+**Next:** [Building CSS →](./05-building-css.md)

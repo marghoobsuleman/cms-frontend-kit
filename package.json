@@ -1,20 +1,19 @@
 {
-  "name": "@hashtagcms/themes",
-  "version": "1.0.3",
+  "name": "@hashtagcms/web-ui-kit",
+  "version": "1.0.5",
   "author": {
     "name": "HashtagCMS",
     "url": "https://github.com/hashtagcms"
   },
-  "description": "Frontend Themes and Core Logic for HashtagCMS",
+  "description": "Laravel Frontend Themes and Core Logic for HashtagCMS",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hashtagcms/cms-frontend-kit.git"
+    "url": "git+https://github.com/hashtagcms/web-ui-kit.git"
   },
   "bugs": {
-    "url": "https://github.com/hashtagcms/cms-frontend-kit/issues"
+    "url": "https://github.com/hashtagcms/web-ui-kit/issues"
   },
-  "homepage": "https://github.com/hashtagcms/cms-frontend-kit#readme",
-  "main": "src/core/js/index.js",
+  "homepage": "https://github.com/hashtagcms/web-ui-kit#readme",
   "bin": "./bin/cli.js",
   "files": [
     "src",
@@ -44,6 +43,7 @@
     "bootstrap": "^5.3.3",
     "chalk": "^4.1.2",
     "fs-extra": "^11.3.3",
-    "inquirer": "^8.2.7"
+    "inquirer": "^8.2.7",
+    "@hashtagcms/web-sdk": "^1.0.0"
   }
 }

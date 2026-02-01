@@ -2,7 +2,7 @@
 
 ## 📚 Complete Documentation Overview
 
-All documentation for @hashtagcms/themes has been organized into the `docs/` directory.
+All documentation for @hashtagcms/web-ui-kit has been organized into the `docs/` directory.
 
 ### Documentation Files Created
 
@@ -11,7 +11,7 @@ All documentation for @hashtagcms/themes has been organized into the `docs/` dir
 - Quick links to specific topics
 - "I want to..." guide for common tasks
 
-#### 2. **GETTING_STARTED.md** (2.7 KB)
+#### 2. **01-getting-started.md** (2.7 KB)
 **Purpose:** First steps for new users
 
 **Contents:**
@@ -23,7 +23,7 @@ All documentation for @hashtagcms/themes has been organized into the `docs/` dir
 
 **Target Audience:** Developers new to the package
 
-#### 3. **CREATING_THEMES.md** (7.2 KB)
+#### 3. **02-creating-themes.md** (7.2 KB)
 **Purpose:** Complete guide for theme creation
 
 **Contents:**
@@ -37,7 +37,7 @@ All documentation for @hashtagcms/themes has been organized into the `docs/` dir
 
 **Target Audience:** Developers creating custom themes
 
-#### 4. **THEME_STRUCTURE.md** (8.2 KB)
+#### 4. **03-theme-structure.md** (8.2 KB)
 **Purpose:** Technical reference for package architecture
 
 **Contents:**
@@ -51,7 +51,7 @@ All documentation for @hashtagcms/themes has been organized into the `docs/` dir
 
 **Target Audience:** Advanced developers and contributors
 
-#### 5. **API_REFERENCE.md** (8.4 KB)
+#### 5. **07-api-reference.md** (8.4 KB)
 **Purpose:** Complete API documentation
 
 **Contents:**
@@ -67,7 +67,7 @@ All documentation for @hashtagcms/themes has been organized into the `docs/` dir
 
 **Target Audience:** Developers integrating components
 
-#### 6. **FAQ.md** (7.4 KB)
+#### 6. **08-faq.md** (7.4 KB)
 **Purpose:** Common questions and troubleshooting
 
 **Contents:**
@@ -175,20 +175,20 @@ When making changes to the package:
 ## 🎓 Learning Path
 
 ### Beginner Path
-1. Read [Getting Started](./GETTING_STARTED.md)
+1. Read [Getting Started](./01-getting-started.md)
 2. Try using Basic theme
 3. Customize colors/fonts
-4. Check [FAQ](./FAQ.md) for issues
+4. Check [FAQ](./08-faq.md) for issues
 
 ### Intermediate Path
-1. Review [Theme Structure](./THEME_STRUCTURE.md)
-2. Read [Creating Themes](./CREATING_THEMES.md)
+1. Review [Theme Structure](./03-theme-structure.md)
+2. Read [Creating Themes](./02-creating-themes.md)
 3. Create a simple custom theme
-4. Reference [API](./API_REFERENCE.md) as needed
+4. Reference [API](./07-api-reference.md) as needed
 
 ### Advanced Path
-1. Study [Theme Structure](./THEME_STRUCTURE.md) in detail
-2. Review [API Reference](./API_REFERENCE.md) completely
+1. Study [Theme Structure](./03-theme-structure.md) in detail
+2. Review [API Reference](./07-api-reference.md) completely
 3. Create complex custom themes
 4. Contribute back to the project
 

@@ -1,23 +1,9 @@
-import axios from "axios";
-axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-let token = document.head.querySelector('meta[name="csrf-token"]');
-if (token) {
-    axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
-    axios.defaults.headers.common['Authorization'] = 'Bearer ' + token.content;
-    axios.defaults.withCredentials = true;
-} else {
-    console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
-}
-window.axios = axios;
-
-
-import Analytics from "../../../core/js/utils/analytics";
-import Subscribe from "../../../core/js/components/subscribe";
-import { AppConfig } from "../../../core/js/helpers/common";
+import { Analytics, Newsletter, AppConfig } from "@hashtagcms/web-sdk";
 
 
 window.HashtagCms = { configData: {} };
-window.HashtagCms.Subscribe = new Subscribe();
+window.HashtagCms.Newsletter = new Newsletter();
+window.HashtagCms.Subscribe = window.HashtagCms.Newsletter; // Legacy support
 window.HashtagCms.Analytics = new Analytics();
 window.HashtagCms.AppConfig = new AppConfig();
 
@@ -33,7 +19,7 @@ window.HashtagCms.AppConfig = new AppConfig();
 
 class ElegantTheme {
     constructor() {
-        this.initSubscribe();
+        this.initNewsletter();
         this.initSmoothScroll();
         this.initParallax();
         this.initCardAnimations();
@@ -41,11 +27,8 @@ class ElegantTheme {
         console.log('Elegant Theme loaded');
     }
 
-    initSubscribe() {
-        const subscribeElement = document.getElementById('subscribe-form');
-        if (subscribeElement) {
-            new Subscribe(subscribeElement);
-        }
+    initNewsletter() {
+        // Newsletter is already initialized globally as window.HashtagCms.Newsletter
     }
 
     initNavbar() {

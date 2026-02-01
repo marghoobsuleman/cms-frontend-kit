@@ -1,11 +1,14 @@
-# Getting Started with @hashtagcms/themes
+# Getting Started with @hashtagcms/web-ui-kit
 
-Welcome! This guide will help you get started with using and creating themes for HashtagCMS.
+Welcome! This guide will help you get started with using and creating themes for the **Blade/PHP (Laravel)** ecosystem of HashtagCMS.
+
+> [!TIP]
+> For Java developers, please check `@hashtagcms/theme-java`.
 
 ## 📦 Installation
 
 ```bash
-npm install @hashtagcms/themes
+npm install @hashtagcms/web-ui-kit
 ```
 
 ## 🎨 Using an Existing Theme
@@ -15,19 +18,19 @@ npm install @hashtagcms/themes
 **In your SCSS file:**
 ```scss
 // For Basic theme
-@import "~@hashtagcms/themes/src/themes/basic/sass/app";
+@import "~@hashtagcms/web-ui-kit/src/themes/basic/sass/app";
 
 // For Elegant theme
-@import "~@hashtagcms/themes/src/themes/elegant/sass/app";
+@import "~@hashtagcms/web-ui-kit/src/themes/elegant/sass/app";
 ```
 
 **In your JavaScript file:**
 ```javascript
 // For Basic theme
-import '@hashtagcms/themes/src/themes/basic/js/app';
+import '@hashtagcms/web-ui-kit/src/themes/basic/js/app';
 
 // For Elegant theme
-import '@hashtagcms/themes/src/themes/elegant/js/app';
+import '@hashtagcms/web-ui-kit/src/themes/elegant/js/app';
 ```
 
 ### Option 2: Use Pre-compiled Assets
@@ -35,12 +38,12 @@ import '@hashtagcms/themes/src/themes/elegant/js/app';
 **In your HTML:**
 ```html
 <!-- Basic Theme -->
-<link rel="stylesheet" href="node_modules/@hashtagcms/themes/dist/themes/basic/app.css">
-<script src="node_modules/@hashtagcms/themes/dist/themes/basic/app.js"></script>
+<link rel="stylesheet" href="node_modules/@hashtagcms/web-ui-kit/dist/themes/basic/app.css">
+<script src="node_modules/@hashtagcms/web-ui-kit/dist/themes/basic/app.js"></script>
 
 <!-- Elegant Theme -->
-<link rel="stylesheet" href="node_modules/@hashtagcms/themes/dist/themes/elegant/app.css">
-<script src="node_modules/@hashtagcms/themes/dist/themes/elegant/app.js"></script>
+<link rel="stylesheet" href="node_modules/@hashtagcms/web-ui-kit/dist/themes/elegant/app.css">
+<script src="node_modules/@hashtagcms/web-ui-kit/dist/themes/elegant/app.js"></script>
 ```
 
 ## 🎯 Available Themes
@@ -84,7 +87,7 @@ $theme-colors: (
   "secondary": #your-color
 );
 
-@import "~@hashtagcms/themes/src/themes/basic/sass/app";
+@import "~@hashtagcms/web-ui-kit/src/themes/basic/sass/app";
 ```
 
 ### Extending Styles
@@ -92,7 +95,7 @@ $theme-colors: (
 Add your custom styles after importing the theme:
 
 ```scss
-@import "~@hashtagcms/themes/src/themes/elegant/sass/app";
+@import "~@hashtagcms/web-ui-kit/src/themes/elegant/sass/app";
 
 // Your custom styles
 .my-custom-class {
@@ -102,13 +105,13 @@ Add your custom styles after importing the theme:
 
 ## 📚 Next Steps
 
-- [Creating a New Theme](./CREATING_THEMES.md)
-- [Theme Structure](./THEME_STRUCTURE.md)
+- [Creating a New Theme](./02-creating-themes.md)
+- [Theme Structure](./03-theme-structure.md)
 - [Contributing Guidelines](../CONTRIBUTING.md)
-- [API Reference](./API_REFERENCE.md)
+- [API Reference](./07-api-reference.md)
 
 ## 🆘 Need Help?
 
-- Check our [FAQ](./FAQ.md)
-- Report issues on [GitHub](https://github.com/marghoobsuleman/hashtagcms-themes/issues)
+- Check our [FAQ](./08-faq.md)
+- Report issues on [GitHub](https://github.com/hashtagcms/web-ui-kit/issues)
 - Read the [full documentation](./README.md)

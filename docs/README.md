@@ -1,57 +1,53 @@
 # Documentation Index
 
-Welcome to the @hashtagcms/themes documentation!
+Welcome to the @hashtagcms/web-ui-kit documentation!
 
 ## 📖 Documentation
 
 ### Getting Started
-- **[Getting Started Guide](./GETTING_STARTED.md)** - Installation, basic usage, and theme selection
-- **[FAQ](./FAQ.md)** - Frequently asked questions and troubleshooting
+- **[Getting Started Guide](./01-getting-started.md)** - Installation, basic usage, and theme selection
+- **[FAQ](./08-faq.md)** - Frequently asked questions and troubleshooting
 
 ### Building Themes
-- **[Building JavaScript](./BUILDING_JAVASCRIPT.md)** - Complete JavaScript compilation guide
-- **[Building CSS](./BUILDING_CSS.md)** - Complete CSS/SCSS compilation guide
-- **[Webpack Configuration](./WEBPACK_CONFIGURATION.md)** - Understanding and customizing webpack
+- **[Building JavaScript](./06-building-javascript.md)** - Complete JavaScript compilation guide
+- **[Building CSS](./05-building-css.md)** - Complete CSS/SCSS compilation guide
+- **[Webpack Configuration](./04-webpack-configuration.md)** - Understanding and customizing webpack
 
 ### For Theme Developers
-- **[Creating Themes](./CREATING_THEMES.md)** - Complete guide to creating custom themes
-- **[Theme Structure](./THEME_STRUCTURE.md)** - Package organization and file structure
-- **[API Reference](./API_REFERENCE.md)** - Complete API documentation for components and utilities
-
-### Advanced Topics
-- **[Integration Testing](./INTEGRATION_TESTING.md)** - Testing themes locally before publishing
-- **[JSKit Animate Fix](./JSKIT_ANIMATE_FIX.md)** - Technical details on animate.css integration
+- **[Creating Themes](./02-creating-themes.md)** - Complete guide to creating custom themes
+- **[Theme Structure](./03-theme-structure.md)** - Package organization and file structure
+- **[API Reference](./07-api-reference.md)** - Complete API documentation for components and utilities
 
 ## 🎯 Quick Links
 
 ### I want to...
 
 **Use an existing theme**
-→ Start with [Getting Started](./GETTING_STARTED.md)
+→ Start with [Getting Started](./01-getting-started.md)
 
 **Build JavaScript for my theme**
-→ Read [Building JavaScript](./BUILDING_JAVASCRIPT.md)
+→ Read [Building JavaScript](./06-building-javascript.md)
 
 **Build CSS for my theme**
-→ Read [Building CSS](./BUILDING_CSS.md)
+→ Read [Building CSS](./05-building-css.md)
 
 **Understand webpack configuration**
-→ See [Webpack Configuration](./WEBPACK_CONFIGURATION.md)
+→ See [Webpack Configuration](./04-webpack-configuration.md)
 
 **Create a new theme**
-→ Read [Creating Themes](./CREATING_THEMES.md)
+→ Read [Creating Themes](./02-creating-themes.md)
 
 **Customize a theme**
-→ Check [Getting Started - Customization](./GETTING_STARTED.md#-customization)
+→ Check [Getting Started - Customization](./01-getting-started.md#-customization)
 
 **Understand the package structure**
-→ See [Theme Structure](./THEME_STRUCTURE.md)
+→ See [Theme Structure](./03-theme-structure.md)
 
 **Use specific components**
-→ Browse [API Reference](./API_REFERENCE.md)
+→ Browse [API Reference](./07-api-reference.md)
 
 **Troubleshoot issues**
-→ Check [FAQ](./FAQ.md)
+→ Check [FAQ](./08-faq.md)
 
 **Contribute**
 → Read [Contributing Guidelines](../CONTRIBUTING.md)
@@ -61,25 +57,23 @@ Welcome to the @hashtagcms/themes documentation!
 ```
 docs/
 ├── README.md                    # This file
-├── GETTING_STARTED.md          # Installation and basic usage
-├── BUILDING_JAVASCRIPT.md      # JavaScript compilation guide
-├── BUILDING_CSS.md             # CSS/SCSS compilation guide
-├── WEBPACK_CONFIGURATION.md    # Webpack setup and customization
-├── CREATING_THEMES.md          # Theme creation guide
-├── THEME_STRUCTURE.md          # Package structure
-├── API_REFERENCE.md            # API documentation
-├── FAQ.md                      # FAQ and troubleshooting
-├── INTEGRATION_TESTING.md      # Testing guide
-├── JSKIT_ANIMATE_FIX.md        # Technical notes
+├── 01-getting-started.md          # Installation and basic usage
+├── 06-building-javascript.md      # JavaScript compilation guide
+├── 05-building-css.md             # CSS/SCSS compilation guide
+├── 04-webpack-configuration.md    # Webpack setup and customization
+├── 02-creating-themes.md          # Theme creation guide
+├── 03-theme-structure.md          # Package structure
+├── 07-api-reference.md            # API documentation
+├── 08-faq.md                      # FAQ and troubleshooting
 └── DOCUMENTATION_SUMMARY.md    # Documentation overview
 ```
 
 ## 🆘 Need Help?
 
-1. Check the [FAQ](./FAQ.md)
-2. Search [GitHub Issues](https://github.com/marghoobsuleman/hashtagcms-themes/issues)
-3. Ask in [GitHub Discussions](https://github.com/marghoobsuleman/hashtagcms-themes/discussions)
-4. Open a [new issue](https://github.com/marghoobsuleman/hashtagcms-themes/issues/new)
+1. Check the [FAQ](./08-faq.md)
+2. Search [GitHub Issues](https://github.com/hashtagcms/web-ui-kit/issues)
+3. Ask in [GitHub Discussions](https://github.com/hashtagcms/web-ui-kit/discussions)
+4. Open a [new issue](https://github.com/hashtagcms/web-ui-kit/issues/new)
 
 ## 🤝 Contributing to Documentation
 

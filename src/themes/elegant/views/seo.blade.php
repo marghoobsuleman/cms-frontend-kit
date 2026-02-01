@@ -7,7 +7,7 @@
             <div class="col-auto border-bottom mb-5">
                 <h4 class="faq-title">{{____("hashtagcms::modules.Is it Free?")}}</h4>
                 <p class="faq-text">
-                    {{____("hashtagcms::modules.Yes, It's MIT license. You can ask for other license.")}}
+                    {{____("hashtagcms::modules.Yes, It is open source (MIT).")}}
                 </p>
             </div>
 
@@ -23,7 +23,7 @@
                 <h4 class="faq-title">{{____("hashtagcms::modules.Professional Help?")}}</h4>
                 <p class="faq-text">
                     {{____("hashtagcms::modules.Of course, we provide professional consultants.")}}
-                    <a href='{{htcms_get_path('contact')}}'>{{____("hashtagcms::modules.Ask for price")}}</a>.
+                    <a href='{{htcms_get_path('contact')}}'>{{____("hashtagcms::modules.Contact us")}}</a>.
                 </p>
             </div>
         </div>

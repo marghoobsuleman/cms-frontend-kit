@@ -7,7 +7,7 @@ This guide walks you through creating a custom theme for HashtagCMS.
 ### 1. Create Theme Directory Structure
 
 ```bash
-cd cms-frontend-kit
+cd web-ui-kit
 mkdir -p src/themes/my-theme/{js,sass,img,fonts}
 ```
 
@@ -280,7 +280,7 @@ Description of your theme.
 
 ## Usage
 \`\`\`scss
-@import "~@hashtagcms/themes/src/themes/my-theme/sass/app";
+@import "~@hashtagcms/web-ui-kit/src/themes/my-theme/sass/app";
 \`\`\`
 ```
 
@@ -348,6 +348,6 @@ Check out existing themes for reference:
 
 ## 🆘 Need Help?
 
-- Check the [FAQ](./FAQ.md)
-- Review [Theme Structure](./THEME_STRUCTURE.md)
-- Ask in [GitHub Discussions](https://github.com/marghoobsuleman/hashtagcms-themes/discussions)
+- Check the [FAQ](./08-faq.md)
+- Review [Theme Structure](./03-theme-structure.md)
+- Ask in [GitHub Discussions](https://github.com/hashtagcms/web-ui-kit/discussions)
