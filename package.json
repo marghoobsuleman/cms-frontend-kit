@@ -1,6 +1,6 @@
 {
   "name": "@hashtagcms/web-ui-kit",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": {
     "name": "HashtagCMS",
     "url": "https://github.com/hashtagcms"
@@ -25,18 +25,21 @@
     "bin"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "dev": "webpack --mode development --progress --color",
-    "prod": "webpack --mode production --progress --color",
-    "build": "npm run prod",
+    "build": "webpack --mode production --progress --color",
     "watch": "webpack --mode development --watch --progress --color"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.0",
-    "@babel/preset-env": "^7.23.0",
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.0",
+    "babel-jest": "^29.7.0",
     "babel-loader": "^9.1.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-environment-node": "^29.7.0",
     "mini-css-extract-plugin": "^2.7.0",
     "sass": "^1.69.0",
     "sass-loader": "^13.3.0",
@@ -44,11 +47,11 @@
     "webpack-cli": "^5.1.0"
   },
   "dependencies": {
+    "@hashtagcms/web-sdk": "^1.0.2",
     "axios": "^1.8.0",
     "bootstrap": "^5.3.3",
     "chalk": "^4.1.2",
     "fs-extra": "^11.3.3",
-    "inquirer": "^8.2.7",
-    "@hashtagcms/web-sdk": "^1.0.0"
+    "inquirer": "^8.2.7"
   }
 }

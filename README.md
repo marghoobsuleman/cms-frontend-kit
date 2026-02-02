@@ -145,6 +145,15 @@ We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md)
 3. Test thoroughly
 4. Submit a pull request
 
+### 🧪 Testing
+
+This project uses **Jest** for testing.
+
+```bash
+# Run tests
+npm run test
+```
+
 ## 📄 License
 
 [MIT](LICENSE) © HashtagCMS
